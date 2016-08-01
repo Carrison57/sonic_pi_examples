@@ -13,8 +13,20 @@ def dry(heat)
   sleep(1)
 end
 
+def stain_treatment()
+  stain = [true, false].choose
+  if stain == true
+    sample(:drum_cowbell)
+    sleep(1)
+  else
+    sample(:bd_klub)
+    sleep(1)
+  end
+end
+
 3.times do
   wear(8)
+  stain_treatment()
   wash(55)
   dry(:drum_heavy_kick)
 end

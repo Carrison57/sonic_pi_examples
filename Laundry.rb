@@ -16,7 +16,7 @@ end
 def stain_treatment()
   stain = [true, false].choose
   if stain == true
-    sample(:drum_cowbell)
+    sample(:drum_cymbal_hard)
     sleep(1)
   else
     sample(:bd_klub)

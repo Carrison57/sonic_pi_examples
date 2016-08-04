@@ -1,11 +1,9 @@
-#How to make coffee
+#How to make coffee:
 #Fill up pot with water
 #Pour desired amount of water into coffee maker
 #Put filter in coffee maker
 #Choose coffee
-#Measure coffee grinds
 #Pour coffee grinds into filter
-#Make sure coffee pot is in place
 #Turn on coffee pot
 
 def fill_pot()
@@ -29,6 +27,33 @@ def filter
   sleep(1)
 end
 
-fill_pot
-water_amount
-filter
+def choose_coffee
+  coffee = [true, false].choose
+  if coffee == true
+    sample(:bd_boom)
+    sleep(1)
+  else
+    play(35)
+  end
+end
+
+def grinds(time)
+  play (time)
+  sleep (1)
+end
+
+def pot_on
+  sample(:elec_bong)
+  sleep (1)
+end
+
+
+4.times do
+  fill_pot
+  water_amount
+  filter
+  choose_coffee
+  grinds(85)
+  pot_on
+end
+
